@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
+    "express-cors": "^0.0.3",
+    "helmet": "^3.15.1",
+    "pondjs": "^0.8.10",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-timeseries-charts": "^0.15.5"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "devserver": "nodemon --watch ./src/server src/server/server.js",
+    "eject": "react-scripts eject",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "server": "node src/server/server.js",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +30,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "rewire": "^4.0.1",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "expect",
+      "fetch",
+      "it",
+      "jest"
+    ]
+  }
 }
