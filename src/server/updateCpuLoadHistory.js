@@ -3,7 +3,7 @@ const calculateAverage = require('./calculateAverage')
 const updateNotifications = require('./updateNotifications')
 
 function updateCpuLoadHistory (cpuData) {
-  const alertThreshold = 0.2
+  const alertThreshold = 1
   const { twoMinuteAverage } = cpuData
   const prevTwoMinuteAverage = twoMinuteAverage
 

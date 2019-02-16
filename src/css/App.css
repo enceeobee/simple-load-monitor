@@ -7,20 +7,16 @@
 }
 
 .monitor-container, .notifications-container {
-  /* display: inline-block; */
   margin: auto;
   text-align: center;
 }
 
 .monitor-container {
   max-width: 1200px;
-  /* float: left; */
-
 }
 
 .notifications-container {
   max-width: 400px;
-  /* float: right; */
 }
 
 .loading {

@@ -9,11 +9,10 @@ import {
   Resizable
 } from 'react-timeseries-charts'
 
-// import '../css/Monitor.css'
-
 class Monitor extends Component {
   render () {
     const { series } = this.props
+    const maxYAxisValue = Math.min(8, 1 + series.max())
 
     return (
       <div className='monitor'>
@@ -23,19 +22,22 @@ class Monitor extends Component {
             maxTime={series.range().end()}
             minTime={series.range().begin()}
           >
-            {/* TODO - figure out max; should I pass it via API? */}
-            <ChartRow height='300'>
+            <ChartRow
+              height='300'
+              trackerShowTime
+              trackerInfoValues={'values'}
+            >
               <YAxis
                 hideAxisLine
-                id='axis1'
+                id='cpuAxis'
                 label='CPU Load Average'
                 min={0}
-                max={2}
+                max={maxYAxisValue}
                 width='60'
                 type='linear'
                 format={n => Number(n).toFixed(2)} />
               <Charts>
-                <LineChart axis='axis1' series={series} column={['cpu']} />
+                <LineChart axis='cpuAxis' series={series} column={['cpu']} />
               </Charts>
             </ChartRow>
           </ChartContainer>
@@ -45,7 +47,6 @@ class Monitor extends Component {
   }
 }
 
-// TODO - finish propTypes; maybe include max value?
 Monitor.propTypes = {
   series: PropTypes.object
 }
