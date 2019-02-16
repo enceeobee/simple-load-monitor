@@ -1,0 +1,21 @@
+.notifications {
+  margin: auto;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  margin: 10px 0px;
+  padding: 12px;
+  border-radius: .5em;
+}
+
+.triggered {
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+
+.recovered {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}

@@ -1,0 +1,24 @@
+.app-container {
+  margin: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.monitor-container, .notifications-container {
+  margin: auto;
+  text-align: center;
+}
+
+.monitor-container {
+  max-width: 1200px;
+}
+
+.notifications-container {
+  max-width: 400px;
+}
+
+.loading {
+  cursor: wait;
+}
