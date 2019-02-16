@@ -22,3 +22,14 @@
 .loading {
   cursor: wait;
 }
+
+.error {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 12px;
+  border: #f00 1px solid;
+  border-radius: .5em;
+
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
