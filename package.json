@@ -39,6 +39,7 @@
     "standard": "^12.0.1"
   },
   "standard": {
+    "parser": "babel-eslint",
     "globals": [
       "describe",
       "expect",

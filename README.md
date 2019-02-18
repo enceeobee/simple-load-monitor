@@ -1,6 +1,6 @@
 # simple-load-monitor
 
-A simple load monitor built in React and Node.
+A simple load monitor built in React and Node.js.
 
 ## Local setup
 
